@@ -1,0 +1,11 @@
+total = int(input())
+noDays = total % (24 * 60 * 60)
+noHours = noDays % (60 * 60)
+noMins = noHours % 60
+print((noDays // (60 * 60) % 24), end='')
+print(':', end='')
+print((noHours // 60) // 10, end='')
+print((noHours // 60) % 10, end='')
+print(':', end='')
+print(noMins // 10, end='')
+print(noMins % 10, end='')
