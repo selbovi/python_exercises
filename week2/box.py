@@ -5,11 +5,23 @@ a2 = int(input())
 b2 = int(input())
 c2 = int(input())
 
-if (a == a2 and b == b2 and c == c2):
+res = False
+
+f = []
+f.append(a)
+f.append(b)
+f.append(c)
+f.sort()
+s = []
+s.append(a2)
+s.append(b2)
+s.append(c2)
+s.sort()
+if (f[0] == s[0] and f[1] == s[1] and f[2] == s[2]):
     print('Boxes are equal')
-elif (a - a2 > 0 and b - b2 > 0 and c - c2 > 0):
+elif (f[0] >= s[0] and f[1] >= s[1] and f[2] >= s[2]):
     print('The first box is larger than the second one')
-elif (a - a2 < 0 and b - b2 < 0 and c - c2 < 0):
+elif (f[0] <= s[0] and f[1] <= s[1] and f[2] <= s[2]):
     print('The first box is smaller than the second one')
 else:
     print('Boxes are incomparable')
